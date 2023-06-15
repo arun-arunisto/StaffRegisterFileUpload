@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %} Register {% endblock %}
+{% block header %} Employee Register {% endblock %}
+{% block content %}
+{% for error in get_flashed_messages() %}
+  <p>{{error}}</p>
+{% endfor %}
+<div class="form">
+  {{form.hiddentag}}
+  <form method="post" enctype="multipart/form-data">
+    <div class="inputfields">
+      {{form.emp_name(placeholder="Employee Name")}}
+      {% for error in form.emp_name.error %}
+        <p>{{error}}</p>
+      {% endfor %}
+    </div>
+    <div class="inputfields">
+      {{form.emp_id(placeholder="Employee ID")}}
+      {% for error in form.emp_id.error %}
+        <p>{{error}}</p>
+      {% endfor %}
+    </div>
+    <div class="inputfields">
+      {{form.emp_des(placeholder="Employee Designation")}}
+      {% for error in form.emp_des.error %}
+        <p>{{error}}</p>
+      {% endfor %}
+    </div>
+    <div class="inputfields">
+      {{form.emp_photo}}
+      {% for error in form.emp_photo.error %}
+        <p>{{error}}</p>
+      {% endfor %}
+    </div>
+    <div class="inputfields">
+      {{form.csrf_token}}
+      {{form.submit}}
+    </div>
+  </form>
+</div>
+{% endblock %}

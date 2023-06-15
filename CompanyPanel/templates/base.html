@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{{url_for('admin_bp.static', filename='style.css')}}">
+</head>
+<body>
+<div class="heading">
+    <h2>{% block header %} {% endblock %}</h2>
+</div>
+<hr>
+{% block content %} {% endblock %}
+</body>
+</html>

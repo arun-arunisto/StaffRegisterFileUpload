@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %} Welcome Home {% endblock %}
+{% block header %} Welcome Home {% endblock %}
+{% block content %}
+{% for msg in get_flashed_messages() %}
+    <p>{{msg}}</p>
+{% endfor %}
+{% for emp in emp %}
+<div class="profile">
+    <div class="imgfield">
+        <img alt="{{emp.emp_name}}" src="{{url_for('admin_bp.static', filename='uploads/')}}{{emp.emp_photo}}">
+    </div>
+    <div class="personal">
+        <div class="fields">
+            <p>{{emp.emp_name}}</p>
+        </div>
+        <div class="fields">
+            <p>{{emp.emp_des}}</p>
+        </div>
+        <div class="fields">
+            <p>{{emp.emp_id}}</p>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}

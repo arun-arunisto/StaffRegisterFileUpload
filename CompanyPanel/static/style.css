@@ -1,0 +1,50 @@
+.heading {
+    text-align: center;
+    color: red;
+}
+
+.profile {
+    border: solid black 1px;
+    padding: 10px;
+    width: 150px;
+}
+.profile .imgfield {
+    border: solid blue 1px;
+    padding: 10px;
+    text-align: center;
+}
+
+.profile .imgfield img {
+    width: 100px;
+}
+
+.profile .personal {
+    text-align: center;
+}
+
+.personal .fields {
+    border: solid blue 1px;
+    padding: 2px;
+}
+
+.form {
+    border: solid 1px blue;
+    padding: 10px;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.form .inputfields {
+    padding: 10px;
+}
+
+.form .inputfields input[type="text"] {
+    width: 300px;
+    height: 30px;
+}
+
+.form .inputfields input[type="submit"] {
+    width: 150px;
+    height: 30px;
+}
